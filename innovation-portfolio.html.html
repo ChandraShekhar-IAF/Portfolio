@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Innovation Portfolio - Chandra Shekhar</title>
+  <meta name="description" content="Chandra Shekhar — Innovation Portfolio: 25+ operational systems, 100% adoption rate, zero-compliance issues. Systematic innovation for 5-10 year lifecycles." />
+  <meta name="theme-color" content="#c41e3a" />
+  <!-- canonical: replace with your real canonical URL -->
+  <link rel="canonical" href="https://yourdomain.tld/innovation-portfolio" />
+  <!-- favicon: replace with your favicon path -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Innovation Portfolio - Chandra Shekhar" />
+  <meta property="og:description" content="Systematic Innovation Within Structure — Prevention Over Correction." />
+  <meta property="og:type" content="website" />
+  <!-- Replace this placeholder with a hosted 1200x630 image on your domain/CDN -->
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/c41e3a/ffffff?text=Innovation+Portfolio" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Chandra Shekhar",
+    "email":"mailto:csiimbveteran@gmail.com",
+    "sameAs":["https://www.linkedin.com/in/chandraiaf/"],
+    "jobTitle":"Operations & Systems Innovator",
+    "description":"Systematic innovator with 25+ operational systems and 100% adoption rate"
+  }
+  </script>
+
+  <style>
+    :root {
+      --brand-primary: #c41e3a;
+      --brand-secondary: #8b1538;
+      --accent-gold: #ffd700;
+      --bg-light: #f8f9fa;
+      --bg-secondary: #e9ecef;
+      --text-primary: #2c3e50;
+      --text-secondary: #34495e;
+      --text-muted: #7f8c8d;
+      --card-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      --card-shadow-hover: 0 12px 30px rgba(0,0,0,0.12);
+      --radius: 12px;
+      --radius-small: 8px;
+      --spacing-xs: 8px;
+      --spacing-sm: 12px;
+      --spacing-md: 20px;
+      --spacing-lg: 30px;
+      --spacing-xl: 40px;
+    }
+
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-secondary) 100%);
+      padding: var(--spacing-md);
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      background: #111;
+      color: #fff;
+      padding: var(--spacing-xs) var(--spacing-sm);
+      text-decoration: none;
+      border-radius: var(--radius-small);
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      left: var(--spacing-sm);
+      top: var(--spacing-sm);
+    }
+
+    /* Focus styles */
+    a:focus-visible, 
+    button:focus-visible {
+      outline: 3px solid var(--brand-primary);
+      outline-offset: 2px;
+      border-radius: var(--radius-small);
+    }
+
+    /* Main container */
+    .site {
+      max-width: 980px;
+      margin: 0 auto;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+    }
+
+    /* Header */
+    .site-header {
+      background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-secondary) 100%);
+      color: white;
+      padding: var(--spacing-lg);
+      text-align: center;
+      position: relative;
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+                  radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 2px, transparent 2px);
+      background-size: 50px 50px;
+      opacity: 0.3;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .site-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      margin-bottom: var(--spacing-xs);
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-md);
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent-gold);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    /* Main content */
+    .main-content {
+      padding: var(--spacing-xl);
+    }
+
+    .section {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .section-title {
+      color: var(--text-primary);
+      font-size: 1.8rem;
+      margin-bottom: var(--spacing-md);
+      text-align: center;
+      position: relative;
+      padding-bottom: var(--spacing-sm);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(135deg, var(--brand-primary), var(--accent-gold));
+      border-radius: 2px;
+    }
+
+    /* Philosophy box */
+    .philosophy-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border: 2px solid var(--accent-gold);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius);
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+    }
+
+    .philosophy-title {
+      color: var(--text-primary);
+      font-size: 1.4rem;
+      margin-bottom: var(--spacing-sm);
+      font-weight: bold;
+    }
+
+    .philosophy-text {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    /* Innovation grid */
+    .innovation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-md);
+    }
+
+    .innovation-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: var(--spacing-lg);
+      box-shadow: var(--card-shadow);
+      border-left: 5px solid var(--brand-primary);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .innovation-card:hover,
+    .innovation-card:focus-within {
+      transform: translateY(-6px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: var(--spacing-sm);
+      gap: var(--spacing-sm);
+    }
+
+    .card-icon {
+      font-size: 1.6rem;
+      color: var(--brand-primary);
+      line-height: 1;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--text-primary);
+      flex: 1;
+    }
+
+    .card-year {
+      background: var(--accent-gold);
+      color: var(--text-primary);
+      padding: 4px var(--spacing-sm);
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+
+    .card-description {
+      color: var(--text-muted);
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.6;
+    }
+
+    .metrics-row {
+      display: flex;
+      gap: var(--spacing-sm);
+      margin: var(--spacing-sm) 0;
+      flex-wrap: wrap;
+    }
+
+    .metric {
+      background: var(--bg-light);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--brand-primary);
+      font-weight: bold;
+    }
+
+    .impact-box {
+      background: linear-gradient(135deg, #e8f5e8 0%, #d4edda 100%);
+      border: 1px solid #c3e6c3;
+      padding: var(--spacing-sm);
+      border-radius: var(--radius-small);
+      margin-top: var(--spacing-sm);
+    }
+
+    .impact-title {
+      font-weight: bold;
+      color: #155724;
+      margin-bottom: var(--spacing-xs);
+      font-size: 0.9rem;
+    }
+
+    .impact-text {
+      color: #155724;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+
+    /* Business matrix */
+    .business-matrix {
+      background: var(--bg-light);
+      border-radius: var(--radius);
+      padding: var(--spacing-lg);
+      margin: var(--spacing-lg) 0;
+    }
+
+    .matrix-title {
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-lg);
+      font-weight: bold;
+    }
+
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--spacing-md);
+    }
+
+    .matrix-item {
+      background: white;
+      padding: var(--spacing-md);
+      border-radius: var(--radius-small);
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .matrix-number {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--brand-primary);
+      margin-bottom: var(--spacing-xs);
+      display: block;
+    }
+
+    .matrix-label {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* Applications grid */
+    .applications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--spacing-md);
+      margin: var(--spacing-md) 0;
+    }
+
+    .application-card {
+      background: white;
+      padding: var(--spacing-md);
+      border-radius: var(--radius-small);
+      box-shadow: var(--card-shadow);
+      text-align: center;
+    }
+
+    .application-icon {
+      font-size: 2rem;
+      color: var(--brand-primary);
+      margin-bottom: var(--spacing-sm);
+      display: block;
+    }
+
+    .application-title {
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-sm);
+      font-weight: bold;
+    }
+
+    .application-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* CTA section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+      color: white;
+      padding: var(--spacing-lg);
+      border-radius: var(--radius);
+      text-align: center;
+      margin-top: var(--spacing-xl);
+    }
+
+    .cta-title {
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-sm);
+      font-weight: bold;
+    }
+
+    .cta-text {
+      font-size: 1.05rem;
+      margin-bottom: var(--spacing-md);
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: var(--spacing-sm);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+      color: white;
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .cta-button:hover,
+    .cta-button:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
+    }
+
+    .trust-strip {
+      margin-top: var(--spacing-md);
+      font-size: 0.9rem;
+      opacity: 0.8;
+      color: rgba(255,255,255,0.8);
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .site {
+        margin: var(--spacing-sm);
+      }
+      
+      .main-content {
+        padding: var(--spacing-md);
+      }
+      
+      .stats-row {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+      
+      .innovation-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .metrics-row {
+        justify-content: center;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-button {
+        width: 100%;
+        max-width: 250px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: var(--spacing-sm);
+      }
+      
+      .site-header {
+        padding: var(--spacing-md);
+      }
+      
+      .main-content {
+        padding: var(--spacing-md) var(--spacing-sm);
+      }
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      
+      .site {
+        box-shadow: none;
+        max-width: none;
+      }
+      
+      .skip-link {
+        display: none;
+      }
+      
+      .cta-section {
+        background: #f0f0f0 !important;
+        color: black !important;
+      }
+      
+      .innovation-card {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="site" role="document">
+    <header class="site-header" role="banner">
+      <div class="header-content">
+        <h1 class="site-title">
+          <span class="emoji-decor" aria-hidden="true">🚀</span>
+          Innovation Portfolio
+        </h1>
+        <p class="subtitle">Systematic Innovation Within Structure</p>
+
+        <div class="stats-row" role="list" aria-label="Portfolio statistics">
+          <div class="stat" role="listitem">
+            <span class="stat-number" aria-label="25 plus">25+</span>
+            <span class="stat-label">Systems Created</span>
+          </div>
+          <div class="stat" role="listitem">
+            <span class="stat-number" aria-label="100 percent">100%</span>
+            <span class="stat-label">Adoption Rate</span>
+          </div>
+          <div class="stat" role="listitem">
+            <span class="stat-number" aria-label="7 plus">7+</span>
+            <span class="stat-label">Years Active</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="main-content" role="main">
+      <!-- Philosophy Section -->
+      <section class="philosophy-box" aria-labelledby="philosophy-title">
+        <h2 id="philosophy-title" class="philosophy-title">Innovation Philosophy</h2>
+        <p class="philosophy-text">"Prevention Over Correction" - Creating sustainable systems that prevent problems rather than fixing them after they occur, with solutions designed for 5-10 year operational lifecycle.</p>
+      </section>
+
+      <!-- Flagship Innovations -->
+      <section class="section" aria-labelledby="innovations-title">
+        <h2 id="innovations-title" class="section-title">
+          <span class="emoji-decor" aria-hidden="true">💡</span>
+          Flagship Innovations
+        </h2>
+        
+        <div class="innovation-grid">
+          <article class="innovation-card">
+            <header class="card-header">
+              <span class="card-icon emoji-decor" aria-hidden="true">📧</span>
+              <h3 class="card-title">Mail Follow-up System</h3>
+              <span class="card-year">2015-2022+</span>
+            </header>
+            <p class="card-description">Systematic communication tracking and accountability system for organizational efficiency management.</p>
+            <div class="metrics-row">
+              <span class="metric">60% Faster Response</span>
+              <span class="metric">Zero Missed Deadlines</span>
+            </div>
+            <div class="impact-box">
+              <div class="impact-title">🏆 Legacy Impact</div>
+              <div class="impact-text">Adopted IAF-wide in 2022 (7-year adoption cycle). Integrated into E-Office ERP across entire organization.</div>
+            </div>
+          </article>
+
+          <article class="innovation-card">
+            <header class="card-header">
+              <span class="card-icon emoji-decor" aria-hidden="true">📊</span>
+              <h3 class="card-title">Resource Optimization Calculator</h3>
+              <span class="card-year">2019-Present</span>
+            </header>
+            <p class="card-description">Advanced forecasting algorithms for predictive maintenance and inventory optimization.</p>
+            <div class="metrics-row">
+              <span class="metric">70% Stockout Reduction</span>
+              <span class="metric">25% Efficiency Gain</span>
+            </div>
+            <div class="impact-box">
+              <div class="impact-title">📈 Business Value</div>
+              <div class="impact-text">Published on IAF website as standard reference. Organization-wide adoption across equipment categories.</div>
+            </div>
+          </article>
+
+          <article class="innovation-card">
+            <header class="card-header">
+              <span class="card-icon emoji-decor" aria-hidden="true">⚡</span>
+              <h3 class="card-title">COVID-19 Crisis Coordination</h3>
+              <span class="card-year">2020-2022</span>
+            </header>
+            <p class="card-description">Real-time personnel tracking and resource allocation during unprecedented global crisis.</p>
+            <div class="metrics-row">
+              <span class="metric">100% Continuity</span>
+              <span class="metric">4 Facilities Managed</span>
+            </div>
+            <div class="impact-box">
+              <div class="impact-title">🎯 Executive Impact</div>
+              <div class="impact-text">Used daily by Chief Engineering Officer for critical decisions. Zero COVID transmission incidents.</div>
+            </div>
+          </article>
+
+          <article class="innovation-card">
+            <header class="card-header">
+              <span class="card-icon emoji-decor" aria-hidden="true">🌍</span>
+              <h3 class="card-title">International Integration Protocol</h3>
+              <span class="card-year">2021-2022</span>
+            </header>
+            <p class="card-description">Multi-cultural coordination framework for French Rafale aircraft technology transfer.</p>
+            <div class="metrics-row">
+              <span class="metric">100% Success Rate</span>
+              <span class="metric">Multi-Cultural Teams</span>
+            </div>
+            <div class="impact-box">
+              <div class="impact-title">🚀 Strategic Value</div>
+              <div class="impact-text">Replicable framework for future international programs. Complete knowledge transfer achieved.</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Business Impact Matrix -->
+      <section class="business-matrix" aria-labelledby="matrix-title">
+        <h2 id="matrix-title" class="matrix-title">
+          <span class="emoji-decor" aria-hidden="true">📈</span>
+          Quantified Business Impact
+        </h2>
+        <div class="matrix-grid">
+          <div class="matrix-item">
+            <span class="matrix-number">25+</span>
+            <span class="matrix-label">Systems Developed</span>
+          </div>
+          <div class="matrix-item">
+            <span class="matrix-number">60%</span>
+            <span class="matrix-label">Avg. Efficiency Gain</span>
+          </div>
+          <div class="matrix-item">
+            <span class="matrix-number">₹200Cr+</span>
+            <span class="matrix-label">Assets Optimized</span>
+          </div>
+          <div class="matrix-item">
+            <span class="matrix-number">7 Years</span>
+            <span class="matrix-label">Longest Active System</span>
+          </div>
+          <div class="matrix-item">
+            <span class="matrix-number">100%</span>
+            <span class="matrix-label">Organization Adoption</span>
+          </div>
+          <div class="matrix-item">
+            <span class="matrix-number">Zero</span>
+            <span class="matrix-label">Compliance Issues</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cross-Industry Applications -->
+      <section class="section" aria-labelledby="applications-title">
+        <h2 id="applications-title" class="section-title">
+          <span class="emoji-decor" aria-hidden="true">🎯</span>
+          Corporate Applications
+        </h2>
+        <div class="applications-grid">
+          <div class="application-card">
+            <span class="application-icon emoji-decor" aria-hidden="true">🏭</span>
+            <h3 class="application-title">Manufacturing</h3>
+            <p class="application-desc">Production optimization, quality management, predictive maintenance</p>
+          </div>
+          <div class="application-card">
+            <span class="application-icon emoji-decor" aria-hidden="true">💻</span>
+            <h3 class="application-title">Technology Services</h3>
+            <p class="application-desc">Service delivery, resource allocation, zero-defect systems</p>
+          </div>
+          <div class="application-card">
+            <span class="application-icon emoji-decor" aria-hidden="true">📋</span>
+            <h3 class="application-title">Program Management</h3>
+            <p class="application-desc">Multi-project coordination, stakeholder communication</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="cta-section" aria-labelledby="cta-title">
+        <h2 id="cta-title" class="cta-title">Ready to Transform Your Operations?</h2>
+        <p class="cta-text">Let's discuss how systematic innovation can drive measurable improvements in your organization.</p>
+        <div class="cta-buttons">
+          <a href="mailto:csiimbveteran@gmail.com" class="cta-button">
+            <span aria-hidden="true">📧</span>
+            Connect via Email
+          </a>
+          <a href="https://www.linkedin.com/in/chandraiaf/" target="_blank" rel="noopener noreferrer" class="cta-button">
+            <span aria-hidden="true">🔗</span>
+            LinkedIn Profile
+          </a>
+        </div>
+        <div class="trust-strip">
+          IAF-wide adoption • ₹200Cr+ assets optimized • Zero compliance issues
+        </div>
+      </section>
+    </main>
+    
+    <footer role="contentinfo" style="padding:20px; text-align:center; font-size:0.95rem; color:var(--text-muted);">
+      <p>Contact: <a href="mailto:csiimbveteran@gmail.com">csiimbveteran@gmail.com</a> • <a href="https://www.linkedin.com/in/chandraiaf/" rel="noopener noreferrer" target="_blank">LinkedIn</a></p>
+      <p><a href="/files/Chandra_Portfolio_OnePager.pdf" download>Download one-page PDF (A4)</a> — ideal for LinkedIn Featured.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Safe analytics and interaction tracking (guarded)
+    function trackInteraction(action, element) {
+      try {
+        if (typeof gtag === 'function') {
+          gtag('event', action, {
+            'event_category': 'portfolio_interaction',
+            'event_label': element
+          });
+        } else if (Array.isArray(window.dataLayer)) {
+          window.dataLayer.push({ event: action, event_label: element });
+        } else {
+          // no analytics available; do nothing
+        }
+      } catch (e) {
+        // swallow analytics errors to preserve UX
+        // optionally log to a local debug endpoint in dev
+        // console.warn('Analytics error', e);
+      }
+    }
+
+    // Enhanced accessibility and animations
+    document.addEventListener('DOMContentLoaded', function() {
+      // Respect reduced motion preferences
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      
+      if (!prefersReducedMotion) {
+        // Intersection Observer for animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }
+          });
+        }, observerOptions);
+
+        // Animate cards with staggered timing
+        const cards = document.querySelectorAll('.innovation-card, .matrix-item, .application-card');
+        cards.forEach((card, index) => {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+          card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+          observer.observe(card);
+        });
+      }
+
+      // CTA tracking
+      document.querySelectorAll('.cta-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+          const buttonText = this.textContent.trim();
+          trackInteraction('cta_click', buttonText);
+        });
+      });
+
+      // Card interaction tracking
+      document.querySelectorAll('.innovation-card').forEach(card => {
+        card.addEventListener('click', function() {
+          const cardTitle = this.querySelector('.card-title').textContent;
+          trackInteraction('card_interaction', cardTitle);
+        });
+      });
+    });
+
+    // Keyboard navigation enhancement
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Tab') {
+        document.body.classList.add('using-keyboard');
+      }
+    });
+
+    document.addEventListener('mousedown', function() {
+      document.body.classList.remove('using-keyboard');
+    });
+  </script>
+</body>
+</html>
