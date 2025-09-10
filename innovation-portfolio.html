@@ -541,6 +541,214 @@
         break-inside: avoid;
       }
     }
+  /* Add this CSS inside the existing <style> tag in innovation-portfolio.html */
+
+/* Print Styles - Add at the end of existing CSS */
+@media print {
+  @page {
+    size: A4;
+    margin: 0.5in;
+  }
+  
+  body {
+    font-size: 10pt;
+    line-height: 1.3;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  
+  .site {
+    box-shadow: none;
+    max-width: none;
+  }
+  
+  .site-header {
+    background: #c41e3a !important;
+    -webkit-print-color-adjust: exact;
+    padding: 15px !important;
+  }
+  
+  .site-title {
+    font-size: 18pt !important;
+  }
+  
+  .subtitle {
+    font-size: 11pt !important;
+  }
+  
+  .stats-row {
+    margin-top: 10px !important;
+  }
+  
+  .stat-number {
+    font-size: 14pt !important;
+  }
+  
+  .stat-label {
+    font-size: 8pt !important;
+  }
+  
+  .main-content {
+    padding: 15px !important;
+  }
+  
+  .philosophy-box {
+    background: #fff3cd !important;
+    -webkit-print-color-adjust: exact;
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .philosophy-title {
+    font-size: 12pt !important;
+  }
+  
+  .philosophy-text {
+    font-size: 9pt !important;
+  }
+  
+  .section-title {
+    font-size: 14pt !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .innovation-grid {
+    gap: 10px !important;
+  }
+  
+  .innovation-card {
+    break-inside: avoid;
+    padding: 8px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .card-title {
+    font-size: 10pt !important;
+  }
+  
+  .card-year {
+    font-size: 7pt !important;
+    padding: 2px 6px !important;
+  }
+  
+  .card-description {
+    font-size: 8pt !important;
+    margin-bottom: 6px !important;
+  }
+  
+  .metrics-row {
+    margin: 4px 0 !important;
+  }
+  
+  .metric {
+    font-size: 6pt !important;
+    padding: 2px 6px !important;
+  }
+  
+  .impact-box {
+    background: #e8f5e8 !important;
+    padding: 6px !important;
+    font-size: 7pt !important;
+  }
+  
+  .impact-title {
+    font-size: 7pt !important;
+    margin-bottom: 2px !important;
+  }
+  
+  .business-matrix {
+    background: #f8f9fa !important;
+    -webkit-print-color-adjust: exact;
+    padding: 10px !important;
+  }
+  
+  .matrix-title {
+    font-size: 12pt !important;
+  }
+  
+  .matrix-grid {
+    gap: 6px !important;
+  }
+  
+  .matrix-item {
+    padding: 6px !important;
+  }
+  
+  .matrix-number {
+    font-size: 12pt !important;
+  }
+  
+  .matrix-label {
+    font-size: 7pt !important;
+  }
+  
+  .applications-grid {
+    gap: 8px !important;
+  }
+  
+  .application-card {
+    padding: 8px !important;
+  }
+  
+  .application-icon {
+    font-size: 14pt !important;
+  }
+  
+  .application-title {
+    font-size: 9pt !important;
+  }
+  
+  .application-desc {
+    font-size: 7pt !important;
+  }
+  
+  .cta-section {
+    background: #2c3e50 !important;
+    -webkit-print-color-adjust: exact;
+    padding: 15px !important;
+  }
+  
+  .cta-title {
+    font-size: 12pt !important;
+  }
+  
+  .cta-text {
+    font-size: 9pt !important;
+  }
+  
+  .trust-strip {
+    font-size: 8pt !important;
+  }
+  
+  .print-btn {
+    display: none !important;
+  }
+}
+
+/* Print Button Styles */
+.print-pdf-btn {
+  background: linear-gradient(135deg, #c41e3a, #8b1538);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.print-pdf-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
+}
+
+@media print {
+  .print-pdf-btn {
+    display: none !important;
+  }
+}
   </style>
 </head>
 
@@ -734,13 +942,11 @@
         <div class="trust-strip">
           IAF-wide adoption • ₹200Cr+ assets optimized • Zero compliance issues
         </div>
+	<button class="print-pdf-btn" onclick="window.print()">
+  	   📄 Download PDF
+	</button>
       </section>
     </main>
-    
-    <footer role="contentinfo" style="padding:20px; text-align:center; font-size:0.95rem; color:var(--text-muted);">
-      <p>Contact: <a href="mailto:csiimbveteran@gmail.com">csiimbveteran@gmail.com</a> • <a href="https://www.linkedin.com/in/chandraiaf/" rel="noopener noreferrer" target="_blank">LinkedIn</a></p>
-      <p><a href="/files/Chandra_Portfolio_OnePager.pdf" download>Download one-page PDF (A4)</a> — ideal for LinkedIn Featured.</p>
-    </footer>
   </div>
 
   <script>
