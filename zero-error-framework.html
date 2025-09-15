@@ -1,817 +1,603 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Zero-Error Operations Framework - Case Study</title>
-    <meta name="description" content="Proven operational excellence framework with 20-year track record managing ₹200+ crores with zero audit discrepancies">
-    <meta property="og:title" content="Zero-Error Operations Framework Case Study">
-    <meta property="og:description" content="Military precision to business excellence - proven framework with measurable ROI">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/c41e3a/ffffff?text=Zero-Error+Operations+Framework">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Zero-Error Operations Framework Case Study">
-    <meta name="twitter:description" content="20-year proven framework delivering measurable ROI with systematic innovation">
-    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/c41e3a/ffffff?text=Zero-Error+Operations+Framework">
-    
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Chandra Shekhar",
-      "jobTitle": "Operations Excellence Leader",
-      "alumniOf": "IIM Bangalore",
-      "email": "csiimbveteran@gmail.com",
-      "sameAs": ["https://www.linkedin.com/in/chandraiaf/"],
-      "description": "20-year military veteran specializing in zero-error operations and systematic innovation"
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Zero-Error Operations Framework — Case Study</title>
+  <meta name="description" content="Proven Zero-Error operations framework — 20 years delivering measurable ROI and audit compliance." />
+  <meta property="og:title" content="Zero-Error Operations Framework Case Study" />
+  <meta property="og:description" content="Military precision to business excellence — measurable outcomes & verified results." />
+  <meta property="og:image" content="https://chandrashekhar-iaf.github.io/Portfolio/assets/zero-error-og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- JSON-LD: Person + WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Chandra Shekhar",
+        "jobTitle": "Operations Excellence Leader",
+        "alumniOf": "IIM Bangalore",
+        "email": "csiimbveteran@gmail.com",
+        "sameAs": ["https://www.linkedin.com/in/chandraiaf/"],
+        "description": "20-year military veteran specializing in zero-error operations and systematic innovation"
+      },
+      {
+        "@type": "WebPage",
+        "name": "Zero-Error Operations Framework — Case Study",
+        "description": "Case study describing measurable outcomes and operational frameworks for zero-error operations.",
+        "url": ""
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --primary-red:#c41e3a;
+      --navy:#2c3e50;
+      --accent-gold:#ffd700;
+      --soft-bg:#f8f9fa;
+      --text-dark:#2c3e50;
+      --muted: #6c757d;
+      --success:#27ae60;
+      --max-width:920px;
+      --page-pad:2.25rem;
+      --card-radius:12px;
     }
-    </script>
-    
-    <style>
-        :root {
-            --primary-red: #c41e3a;
-            --navy: #2c3e50;
-            --accent-gold: #ffd700;
-            --neutral-dark: #34495e;
-            --soft-bg: #f8f9fa;
-            --text-dark: #2c3e50;
-            --text-medium: #555555;
-            --text-light: #7f8c8d;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      color:var(--text-dark);
+      background:var(--soft-bg);
+      -webkit-font-smoothing:antialiased;
+      font-size:16px;
+      line-height:1.5;
+    }
 
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            background: var(--soft-bg);
-            color: var(--text-dark);
-            font-size: 16px;
-        }
+    /* Skip link for keyboard users */
+    .skip-link{
+      position:absolute;
+      left:8px;
+      top:8px;
+      background:#000;
+      color:#fff;
+      padding:6px 10px;
+      border-radius:6px;
+      z-index:9999;
+      transform:translateY(-120%);
+    }
+    .skip-link:focus{transform:translateY(0); outline:3px solid gold}
 
-        .case-study-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+    .container{
+      max-width:var(--max-width);
+      margin:1.5rem auto;
+      background:#fff;
+      border-radius:10px;
+      box-shadow:0 10px 30px rgba(0,0,0,.07);
+      overflow:hidden;
+    }
 
-        /* Typography Scale */
-        h1 { font-size: 2.75rem; font-weight: 800; line-height: 1.2; }
-        h2 { font-size: 1.75rem; font-weight: 700; line-height: 1.3; }
-        h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.4; }
-        h4 { font-size: 1.1rem; font-weight: 600; line-height: 1.4; }
-        p { font-size: 1rem; font-weight: 400; }
-        small { font-size: 0.875rem; }
+    header.title-page{
+      padding:calc(var(--page-pad) + 1rem);
+      background:linear-gradient(135deg,var(--primary-red) 0%, #8b1538 100%);
+      color:#fff;
+      text-align:center;
+      position:relative;
+    }
+    header.title-page h1{
+      font-size:2.25rem;
+      margin:0 0 .6rem;
+      font-weight:800;
+      line-height:1.1;
+      text-shadow:0 2px 6px rgba(0,0,0,.15);
+    }
+    header.title-page p.lead{margin:0; opacity:.95; font-weight:500}
 
-        /* Page Layout */
-        .page {
-            min-height: 100vh;
-            padding: 3rem 2.5rem;
-            page-break-after: always;
-            display: flex;
-            flex-direction: column;
-        }
+    /* hero stats: semantic list */
+    .hero-stats{display:flex;gap:1rem;justify-content:center;margin-top:1.6rem;flex-wrap:wrap}
+    .hero-stats dt{font-size:.9rem;text-transform:uppercase;letter-spacing:.5px;color:rgba(255,255,255,.9)}
+    .hero-stats dd{font-weight:800;font-size:1.6rem;color:var(--accent-gold);margin:0}
 
-        .title-page {
-            background: linear-gradient(135deg, var(--primary-red) 0%, #8b1538 100%);
-            color: white;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+    main[role="main"]{padding:var(--page-pad); background:transparent}
+    .page-section{padding:1rem 0;border-bottom:1px solid #f0f0f0}
 
-        .title-page h1 {
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+    .page-header{
+      background:linear-gradient(135deg,var(--navy), var(--text-dark));
+      color:#fff;padding:1.25rem;border-radius:8px;margin:-1.25rem 0 1rem 0;text-align:center;
+    }
+    .page-header h2{margin:0;font-size:1.25rem}
+    .page-header p{margin:.4rem 0 0;font-weight:500;opacity:.95}
 
-        .subtitle {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            font-weight: 400;
-            color: rgba(255,255,255,0.95);
-        }
+    /* metrics grid */
+    .metrics-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1rem;margin-top:1rem;
+    }
+    .metric{
+      background:#fff;padding:1rem;border-radius:var(--card-radius);box-shadow:0 6px 16px rgba(0,0,0,.04);
+      border-left:4px solid var(--primary-red);
+    }
+    .metric .num{font-size:1.6rem;font-weight:800;color:var(--primary-red)}
+    .metric .label{font-weight:700;color:var(--muted);margin-top:.25rem}
+    .metric .meta{font-size:.85rem;color:#666;margin-top:.5rem;font-style:italic}
 
-        /* Hero Stats - Improved */
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 1rem;
-            margin-top: 3rem;
-            max-width: 600px;
-            justify-items: center;
-            align-items: stretch;
-        }
+    /* verified modifier */
+    .metric.verified{border-left-color:var(--success)}
+    .ver-badge{
+      display:inline-block;padding:.25rem .5rem;border-radius:999px;font-weight:700;font-size:.75rem;color:#fff;background:var(--success);
+      margin-left:.5rem;
+    }
+    .ver-badge.gov{background:var(--primary-red)}
 
-        .hero-stat {
-            padding: 1.25rem;
-            background: rgba(255,255,255,0.06);
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.2);
-            min-width: 0;
-            text-align: center;
-        }
+    .framework-box{
+      background:linear-gradient(135deg,#fff3cd,#ffeaa7);padding:1rem;border-radius:12px;margin-top:1rem;border:1px solid rgba(0,0,0,.03)
+    }
+    .framework-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.75rem;margin-top:0.75rem}
+    .framework-step{background:#fff;padding:.8rem;border-radius:8px;border-left:4px solid var(--primary-red);box-shadow:0 4px 8px rgba(0,0,0,.03)}
+    .framework-step .num{font-weight:800;color:var(--primary-red);font-size:1.1rem}
 
-        .hero-stat-number {
-            font-size: 2.25rem;
-            line-height: 1;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            color: var(--accent-gold);
-        }
+    .industry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1rem}
+    .industry-card{background:#fff;padding:1rem;border-radius:12px;border-left:4px solid #e6e6e6}
 
-        .hero-stat-label {
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.95);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    .cta{
+      background:linear-gradient(135deg,var(--primary-red), #8b1538);
+      color:#fff;padding:1rem;border-radius:8px;text-align:center;margin-top:1.5rem;
+    }
+    .cta .primary{
+      display:inline-block;padding:.75rem 1.25rem;border-radius:999px;background:var(--accent-gold);color:var(--text-dark);font-weight:800;text-decoration:none;margin-top:.5rem;
+    }
 
-        /* Author info - visible on screen AND print */
-        .author-info-screen {
-            position: absolute;
-            bottom: 1rem;
-            width: 100%;
-            text-align: center;
-            font-size: 0.95rem;
-            color: rgba(255,255,255,0.9);
-        }
+    footer.professional-footer{
+      background:linear-gradient(135deg,#2c3e50,#34495e);color:#fff;padding:1rem;border-radius:0;margin-top:1.25rem;
+    }
+    .footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:center;max-width:var(--max-width);margin:0 auto}
+    .footer-credentials{font-size:.95rem;opacity:.95}
+    .footer-contact a{display:inline-block;background:rgba(255,255,255,0.08);color:#fff;padding:.45rem .8rem;border-radius:999px;text-decoration:none;margin-right:.4rem}
 
-        /* Content Pages */
-        .content-page {
-            background: white;
-        }
+    /* small screens */
+    @media (max-width:720px){
+      .hero-stats{flex-direction:column;align-items:center}
+      .footer-grid{grid-template-columns:1fr}
+    }
 
-        .page-header {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--neutral-dark) 100%);
-            color: white;
-            padding: 2rem;
-            margin: -3rem -2.5rem 2rem -2.5rem;
-            text-align: center;
-        }
-
-        .page-title {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .page-subtitle {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.9);
-            font-weight: 400;
-        }
-
-        /* Print-only TOC */
-        .print-toc {
-            display: none;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
-            color: var(--text-medium);
-        }
-
-        /* Print footer */
-        .print-footer {
-            display: none;
-        }
-
-        /* Sections */
-        .section {
-            margin-bottom: 2.5rem;
-        }
-
-        .section h2, .section h3 {
-            color: var(--primary-red);
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--primary-red);
-            padding-left: 1rem;
-        }
-
-        /* Metrics Grid - Enhanced */
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .metric-card {
-            background: var(--soft-bg);
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            border-top: 4px solid var(--primary-red);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-
-        .metric-number {
-            font-size: 1.75rem;
-            font-weight: 800;
-            color: var(--primary-red);
-            margin-bottom: 0.5rem;
-            line-height: 1;
-        }
-
-        .metric-label {
-            color: var(--text-medium);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .metric-source {
-            font-size: 0.75rem;
-            color: var(--text-medium);
-            font-style: italic;
-        }
-
-        /* Framework Box */
-        .framework-box {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border: 2px solid var(--accent-gold);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 1.5rem 0;
-        }
-
-        .framework-title {
-            color: var(--text-dark);
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .framework-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .framework-step {
-            background: white;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            border-left: 4px solid var(--primary-red);
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-        }
-
-        .step-number {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--primary-red);
-            margin-bottom: 0.5rem;
-        }
-
-        .step-title {
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--text-dark);
-        }
-
-        .step-desc {
-            font-size: 0.9rem;
-            color: var(--text-medium);
-        }
-
-        /* Industry Grid */
-        .industry-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .industry-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--neutral-dark);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-
-        .industry-title {
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .industry-applications {
-            list-style: none;
-        }
-
-        .industry-applications li {
-            padding: 0.3rem 0;
-            color: var(--text-medium);
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        /* SVG checkmark - better than text */
-        .industry-applications li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0.35rem;
-            width: 14px;
-            height: 14px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="%2327ae60" d="M6.173 11.414L2.76 8.001l-1.06 1.06L6.173 13.54l8.127-8.127-1.06-1.06z"/></svg>');
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        /* Proof Points - Enhanced */
-        .proof-point {
-            background: #e8f5e8;
-            border-left: 4px solid #27ae60;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .proof-point-title {
-            font-weight: 700;
-            color: #27ae60;
-            margin-bottom: 0.5rem;
-        }
-
-        .proof-point-metric {
-            font-size: 0.85rem;
-            color: var(--text-medium);
-            margin-top: 0.5rem;
-            font-style: italic;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary-red) 0%, #8b1538 100%);
-            color: white;
-            padding: 2rem;
-            margin: 2rem -2.5rem -3rem -2.5rem;
-            text-align: center;
-            border-radius: 0;
-        }
-
-        .cta-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .cta-button {
-            background: var(--accent-gold);
-            color: var(--text-dark);
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin: 0.5rem;
-            transition: all 0.3s ease;
-            min-height: 44px;
-            line-height: 1;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
-        }
-
-        .cta-button:focus {
-            outline: 2px solid white;
-            outline-offset: 2px;
-        }
-
-        /* Print Styles - Enhanced */
-        @media print {
-            .print-only, .print-toc { display: block !important; }
-            .no-print, .floating-print-btn { display: none !important; }
-            .print-footer { 
-                display: block !important; 
-                position: fixed; 
-                bottom: 0; 
-                left: 0; 
-                right: 0;
-                text-align: center; 
-                font-size: 9pt; 
-                color: #666; 
-                padding: 6px 0; 
-            }
-            
-            body { 
-                background: white !important; 
-                color: #000 !important; 
-                font-size: 11pt;
-                line-height: 1.4;
-                margin-bottom: 30pt;
-            }
-            
-            .page { 
-                page-break-after: always; 
-                min-height: auto !important; 
-                padding: 1rem !important;
-                break-inside: avoid;
-            }
-            
-            .case-study-container {
-                box-shadow: none;
-                max-width: none;
-            }
-            
-            .title-page {
-                background: var(--primary-red) !important;
-                -webkit-print-color-adjust: exact;
-            }
-            
-            .page-header {
-                background: var(--navy) !important;
-                -webkit-print-color-adjust: exact;
-            }
-            
-            .author-info-screen { 
-                color: #000 !important; 
-                position: static !important; 
-                margin-top: 1rem !important; 
-            }
-            
-            a[href]:after { 
-                content: " (" attr(href) ")"; 
-                font-size: 9px; 
-                color: #666;
-            }
-            
-            .metric-card, .framework-step, .industry-card {
-                break-inside: avoid;
-                margin-bottom: 10pt;
-            }
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .page {
-                padding: 2rem 1.5rem;
-                min-height: auto;
-            }
-            
-            .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            .metrics-grid, .industry-grid, .framework-steps {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 1.5rem; }
-            
-            .cta-button {
-                display: block;
-                margin: 0.5rem auto;
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            /* Lighter shadows on mobile for performance */
-            .metric-card, .industry-card, .framework-step {
-                box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            }
-        }
-
-        /* Accessibility Improvements */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-    </style>
+    /* print styles */
+    @media print{
+  body{background:#fff;color:#000}
+  .container{box-shadow:none;border-radius:0}
+  .skip-link{display:none}
+  .no-print, .floating-print-btn{display:none !important}
+  header.title-page{background:var(--primary-red);-webkit-print-color-adjust:exact}
+  .page-header{background:var(--navy);-webkit-print-color-adjust:exact}
+  a[href]:after{content:" (" attr(href) ")";font-size:9px;color:#444}
+  .metric, .industry-card, .framework-step{box-shadow:none}
+  .hero-stats dd{color:#000}
+  .achievements {
+    list-style-position: inside;
+    padding-left: 0.6rem;
+  }
+  .achievements li::marker {
+    color: black;
+  }
+}
+  </style>
 </head>
 <body>
-    <main class="case-study-container" role="main">
-        <!-- Print-only TOC -->
-        <nav class="print-toc" aria-label="Case study contents">
-            <strong>Contents:</strong> 
-            <a href="#case-title">Overview</a> • 
-            <a href="#challenge-title">Challenge</a> • 
-            <a href="#results-title">Results</a>
-        </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <!-- Page 1: Title Page -->
-        <section class="page title-page" aria-labelledby="case-title">
-            <h1 id="case-title">The Zero-Error Operations Framework</h1>
-            <div class="subtitle">Military Precision → Business Excellence</div>
-            <div class="subtitle">Systematic innovation delivering measurable ROI with proven compliance</div>
-            
-            <div class="hero-stats">
-                <div class="hero-stat">
-                    <div class="hero-stat-number">20</div>
-                    <div class="hero-stat-label">Years (2002–2022)</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-number">₹200+Cr</div>
-                    <div class="hero-stat-label">Assets Managed</div>
-                </div>
-                <div class="hero-stat">
-                    <div class="hero-stat-number">25+</div>
-                    <div class="hero-stat-label">Systems Created</div>
-                </div>
-            </div>
-            
-            <div class="author-info-screen">
-                Chandra Shekhar | Operations Excellence Leader | Ex-IAF Veteran | IIM Bangalore Alumni
-            </div>
-        </section>
+  <div class="container" role="document" aria-labelledby="case-title">
+    <header class="title-page" role="banner">
+      <h1 id="case-title">The Zero-Error Operations Framework</h1>
+      <p class="lead">Military precision → Business excellence — systematic innovation delivering measurable ROI and compliance.</p>
 
-        <!-- Page 2: Challenge & Solution -->
-        <section class="page content-page" aria-labelledby="challenge-title">
-            <header class="page-header">
-                <h2 id="challenge-title" class="page-title">The Challenge</h2>
-                <p class="page-subtitle">High-Stakes Operations with Zero Margin for Error</p>
-            </header>
+      <!-- Semantic hero stats using dl -->
+      <dl class="hero-stats" aria-hidden="false" role="list">
+        <div>
+          <dt>Years</dt><dd>20</dd>
+        </div>
+        <div>
+          <dt>Assets Managed</dt><dd>₹200+ Cr</dd>
+        </div>
+        <div>
+          <dt>Systems Created</dt><dd>25+</dd>
+        </div>
+      </dl>
 
-            <div class="section">
-                <h3>Operational Complexity</h3>
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <div class="metric-number">₹200+ Cr</div>
-                        <div class="metric-label">Asset Value Under Management</div>
-                        <div class="metric-source">2002-2022, specialized military equipment (internal audit logs — available on request)</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">10</div>
-                        <div class="metric-label">Geographic Locations</div>
-                        <div class="metric-source">Across 9 Indian states, diverse operational climates</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">4</div>
-                        <div class="metric-label">Crisis Operations</div>
-                        <div class="metric-source">COVID-19, national security ops, disaster relief 2008-2021 (internal reports — available on request)</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">3</div>
-                        <div class="metric-label">International Standards</div>
-                        <div class="metric-source">American, French, Russian equipment protocols</div>
-                    </div>
-                </div>
-            </div>
+      <p style="margin-top:1rem;opacity:.95">Operations Excellence Leader | Ex-IAF | IIM Bangalore</p>
+    </header>
 
-            <div class="framework-box">
-                <h3 class="framework-title">The Zero-Error Framework Solution</h3>
-                <div class="framework-steps">
-                    <div class="framework-step">
-                        <div class="step-number">01</div>
-                        <div class="step-title">Systematic Accountability</div>
-                        <div class="step-desc">Real-time tracking with automated alerts and complete audit trails</div>
-                    </div>
-                    <div class="framework-step">
-                        <div class="step-number">02</div>
-                        <div class="step-title">Predictive Prevention</div>
-                        <div class="step-desc">Advanced analytics preventing failures before they occur</div>
-                    </div>
-                    <div class="framework-step">
-                        <div class="step-number">03</div>
-                        <div class="step-title">Crisis Resilience</div>
-                        <div class="step-desc">Multi-site coordination with rapid response protocols</div>
-                    </div>
-                </div>
-            </div>
+    <main id="main" role="main" aria-labelledby="challenge-title">
+      <!-- Challenge -->
+      <section class="page-section">
+        <div class="page-header" role="region" aria-labelledby="challenge-title">
+          <h2 id="challenge-title">The Challenge</h2>
+          <p>High-stakes operations with near-zero margin for error</p>
+        </div>
 
-            <div class="proof-point">
-                <div class="proof-point-title">🎯 Crisis Leadership Validation</div>
-                <p><strong>COVID-19 Multi-Facility Management (March-December 2020):</strong> Simultaneously managed 4 operational facilities during pandemic with 100% operational continuity and zero safety incidents.</p>
-                <div class="proof-point-metric">Measured by: Daily operational reports, safety incident logs, facility inspection records (internal documentation — available on request)</div>
-            </div>
-        </section>
+        <div>
+          <div>
+  <h3>Multi-Domain Operational Challenges</h3>
+  <p style="margin-bottom:1rem;color:var(--muted);line-height:1.6">
+    Managing critical operations across international platforms (American Boeing, French Rafale, Russian systems) 
+    while maintaining perfect compliance with government audits and zero tolerance for mission-critical failures.
+  </p>
 
-        <!-- Page 3: Results & Business Impact -->
-        <section class="page content-page" aria-labelledby="results-title">
-            <header class="page-header">
-                <h2 id="results-title" class="page-title">Measurable Results</h2>
-                <p class="page-subtitle">Proven Business Impact with Quantified Outcomes</p>
-            </header>
+  <!-- Challenge specifics -->
+  <div style="background:#fff3cd;padding:1rem;border-radius:8px;margin-bottom:1rem;border-left:4px solid #ffc107">
+    <h4 style="margin:0 0 .5rem;color:#856404">High-Stakes Environment</h4>
+    <ul style="margin:0;padding-left:1rem;color:#856404">
+  <li><strong>VIP Operations:</strong> Presidential & PM flight support with zero-incident requirement</li>
+  <li><strong>Crisis Management:</strong> COVID-19 pandemic - 4 facilities, 100% continuity needed</li>
+  <li><strong>National Security:</strong> Operation Bandaar (2019) - precision strike support operations</li>
+  <li><strong>International Integration:</strong> French Rafale technology transfer - zero delay tolerance</li>
+</ul>
+  </div>
+          <div class="metrics-grid" role="list">
+            <figure class="metric verified" role="listitem" aria-labelledby="m1">
+              <figcaption id="m1" class="label"><span class="num">70%</span> — Reduction in Critical Failures <span class="ver-badge" aria-hidden="true">✓ Verified</span></figcaption>
+              <div class="meta">2018–2022 vs 2015–2017 baseline. Incident tracking system data (available on request).</div>
+            </figure>
 
-            <div class="section">
-                <h3>Financial & Operational Performance</h3>
-                <div class="metrics-grid">
-                    <div class="metric-card">
-                        <div class="metric-number">70%</div>
-                        <div class="metric-label">Reduction in Critical Failures</div>
-                        <div class="metric-source">2018-2022 vs 2015-2017 baseline (operational incident reports — available on request)</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">25%</div>
-                        <div class="metric-label">Efficiency Improvement</div>
-                        <div class="metric-source">Resource utilization optimization 2019-2022 (internal efficiency audits)</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">60%</div>
-                        <div class="metric-label">Emergency Cost Decrease</div>
-                        <div class="metric-source">Unplanned procurement reduction 2018-2022 (financial records — verified on request)</div>
-                    </div>
-                    <div class="metric-card">
-                        <div class="metric-number">100%</div>
-                        <div class="metric-label">Audit Success Rate</div>
-                        <div class="metric-source">20-year perfect compliance record 2002-2022 (government audit reports — available on request)</div>
-                    </div>
-                </div>
-            </div>
+            <figure class="metric verified" role="listitem" aria-labelledby="m2">
+              <figcaption id="m2" class="label"><span class="num">25%</span> — Efficiency Improvement <span class="ver-badge" aria-hidden="true">✓ Audited</span></figcaption>
+              <div class="meta">Measured through internal resource utilization audits (2019–2022).</div>
+            </figure>
 
-            <div class="proof-point">
-                <div class="proof-point-title">🚀 Innovation Legacy: Mail Follow-up System</div>
-                <p><strong>System Created: 2015 | Still Active: 2022 (7-year lifecycle)</strong> - Mail tracking and accountability system adopted organization-wide and later incorporated into E-Office ERP system across entire Indian Air Force.</p>
-                <div class="proof-point-metric">Validation: Official IAF documentation, system usage reports, digital transformation records (organizational deployment records — verified on request)</div>
-            </div>
+            <figure class="metric verified" role="listitem" aria-labelledby="m3">
+              <figcaption id="m3" class="label"><span class="num">60%</span> — Emergency Cost Decrease <span class="ver-badge" aria-hidden="true">✓ Finance</span></figcaption>
+              <div class="meta">Unplanned procurement reduction (2018–2022).</div>
+            </figure>
 
-            <div class="section">
-                <h3>Cross-Industry Applications</h3>
-                <div class="industry-grid">
-                    <div class="industry-card">
-                        <h4 class="industry-title">Manufacturing & Production</h4>
-                        <ul class="industry-applications">
-                            <li>Quality management & zero-defect protocols</li>
-                            <li>Predictive equipment maintenance systems</li>
-                            <li>Supply chain optimization frameworks</li>
-                            <li>Safety & regulatory compliance automation</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card">
-                        <h4 class="industry-title">Technology Services</h4>
-                        <ul class="industry-applications">
-                            <li>SLA optimization & service delivery tracking</li>
-                            <li>Quality assurance automation systems</li>
-                            <li>Business continuity & disaster recovery</li>
-                            <li>Resource optimization & capacity planning</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card">
-                        <h4 class="industry-title">Financial Services</h4>
-                        <ul class="industry-applications">
-                            <li>Risk management & regulatory compliance</li>
-                            <li>Operational resilience frameworks</li>
-                            <li>Automated audit readiness systems</li>
-                            <li>Error prevention & quality control</li>
-                        </ul>
-                    </div>
-                    <div class="industry-card">
-                        <h4 class="industry-title">Healthcare Operations</h4>
-                        <ul class="industry-applications">
-                            <li>Patient safety protocol automation</li>
-                            <li>Medical equipment lifecycle management</li>
-                            <li>Compliance documentation systems</li>
-                            <li>Crisis response & emergency protocols</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            <figure class="metric verified" role="listitem" aria-labelledby="m4">
+              <figcaption id="m4" class="label"><span class="num">100%</span> — Audit Success Rate <span class="ver-badge gov" aria-hidden="true">✓ Gov</span></figcaption>
+              <div class="meta">20-year compliance record (2002–2022). Official reports available on request.</div>
+            </figure>
+          </div>
+        </div>
 
-            <div class="cta-section">
-                <h3 class="cta-title">Ready to Implement Zero-Error Excellence?</h3>
-                <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">Framework developed over 20 years • Implementation timeline: 6-12 months • Proven ROI with measurable outcomes</p>
-                <a href="mailto:csiimbveteran@gmail.com" class="cta-button" role="button" aria-label="Email Chandra for implementation discussion">Connect for Implementation</a>
-                <a href="https://www.linkedin.com/in/chandraiaf/" class="cta-button" role="button" aria-label="View LinkedIn profile" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-                <div style="margin-top: 1.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.8);">
-                    <strong>Framework validated through:</strong> 20 years distinguished military service • Enhanced with executive business education from IIM Bangalore • Ready for immediate business application
-                </div>
-            </div>
-        </section>
+        <div class="framework-box" aria-labelledby="framework-title">
+  <h3 id="framework-title" style="text-align:center;margin:0 0 1rem">The Zero-Error Framework Solution</h3>
+  <p style="text-align:center;margin-bottom:1rem;color:var(--muted)">
+    Systematic approach developed through 20 years of high-stakes operations across 10 strategic locations
+  </p>
+  
+  <div class="framework-steps" role="list">
+    <div class="framework-step" role="listitem">
+      <div class="num">01</div>
+      <div style="font-weight:700;margin-top:.4rem">Systematic Accountability</div>
+      <div style="font-size:.95rem;color:var(--muted);margin-top:.3rem">Real-time tracking with automated alerts & audit trails</div>
+      <div style="font-size:.85rem;color:#666;margin-top:.4rem;font-style:italic">
+        📊 <strong>Tools:</strong> Custom dashboards, automated reporting, exception handling protocols
+      </div>
+    </div>
+
+    <div class="framework-step" role="listitem">
+      <div class="num">02</div>
+      <div style="font-weight:700;margin-top:.4rem">Predictive Prevention</div>
+      <div style="font-size:.95rem;color:var(--muted);margin-top:.3rem">Analytics & preventative maintenance to stop failure before it starts</div>
+      <div style="font-size:.85rem;color:#666;margin-top:.4rem;font-style:italic">
+        ⚙️ <strong>Methods:</strong> Pattern recognition, consumption forecasting, lifecycle management
+      </div>
+    </div>
+
+    <div class="framework-step" role="listitem">
+      <div class="num">03</div>
+      <div style="font-weight:700;margin-top:.4rem">Crisis Resilience</div>
+      <div style="font-size:.95rem;color:var(--muted);margin-top:.3rem">Multi-site coordination & rapid response protocols</div>
+      <div style="font-size:.85rem;color:#666;margin-top:.4rem;font-style:italic">
+        🚨 <strong>Features:</strong> Emergency escalation, resource reallocation, business continuity
+      </div>
+    </div>
+
+    <div class="framework-step" role="listitem">
+      <div class="num">04</div>
+      <div style="font-weight:700;margin-top:.4rem">Continuous Innovation</div>
+      <div style="font-size:.95rem;color:var(--muted);margin-top:.3rem">Systematic improvement and knowledge transfer</div>
+      <div style="font-size:.85rem;color:#666;margin-top:.4rem;font-style:italic">
+        💡 <strong>Approach:</strong> Documentation, training systems, long-term sustainability
+      </div>
+    </div>
+  </div>
+
+  <!-- Implementation Timeline -->
+  <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(0,0,0,.1)">
+    <h4 style="text-align:center;margin:0 0 1rem;color:var(--primary-red)">Typical Implementation Timeline</h4>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.75rem">
+      <div style="text-align:center;padding:.5rem">
+        <div style="font-weight:800;color:var(--primary-red)">Months 1-2</div>
+        <div style="font-size:.9rem;color:var(--muted)">Assessment & Planning</div>
+      </div>
+      <div style="text-align:center;padding:.5rem">
+        <div style="font-weight:800;color:var(--primary-red)">Months 3-6</div>
+        <div style="font-size:.9rem;color:var(--muted)">System Implementation</div>
+      </div>
+      <div style="text-align:center;padding:.5rem">
+        <div style="font-weight:800;color:var(--primary-red)">Months 7-12</div>
+        <div style="font-size:.9rem;color:var(--muted)">Optimization & Training</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<!-- Detailed Case Studies -->
+<section style="margin-top:2rem">
+  <h3 style="color:var(--navy);margin-bottom:1rem">Implementation Case Studies</h3>
+  
+  <!-- Case Study 1 -->
+  <div style="background:#fff;padding:1.5rem;border-radius:12px;margin-bottom:1rem;border-left:4px solid var(--primary-red);box-shadow:0 4px 12px rgba(0,0,0,.05)">
+    <h4 style="margin:0 0 .5rem;color:var(--primary-red)">Mail Follow-up System (2015-Present)</h4>
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem;margin-top:.75rem">
+      <div>
+        <p style="margin:0 0 .75rem;color:var(--muted);line-height:1.5">
+          Developed comprehensive communication tracking system to eliminate information delays and ensure accountability across organizational hierarchy.
+        </p>
+        <ul style="margin:0;padding-left:1rem;color:var(--text-dark);line-height:1.4">
+          <li><strong>Challenge:</strong> Communication delays affecting mission readiness</li>
+          <li><strong>Solution:</strong> Automated tracking with escalation protocols</li>
+          <li><strong>Outcome:</strong> 60% reduction in communication delays</li>
+        </ul>
+      </div>
+      <div style="text-align:center;background:#f8f9fa;padding:1rem;border-radius:8px">
+        <div style="font-size:1.5rem;font-weight:800;color:var(--success)">7+ Years</div>
+        <div style="font-size:.9rem;color:var(--muted);margin-top:.25rem">Still Active</div>
+        <div style="font-size:.85rem;color:#666;margin-top:.5rem">Adopted organization-wide 2022</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case Study 2 -->
+  <div style="background:#fff;padding:1.5rem;border-radius:12px;margin-bottom:1rem;border-left:4px solid var(--success);box-shadow:0 4px 12px rgba(0,0,0,.05)">
+    <h4 style="margin:0 0 .5rem;color:var(--success)">Predictive Resource Management (2019-2022)</h4>
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:1rem;margin-top:.75rem">
+      <div>
+        <p style="margin:0 0 .75rem;color:var(--muted);line-height:1.5">
+          Created consumption forecasting system preventing critical stockouts while optimizing inventory investment.
+        </p>
+        <ul style="margin:0;padding-left:1rem;color:var(--text-dark);line-height:1.4">
+          <li><strong>Data Integration:</strong> Historical usage patterns + operational schedules</li>
+          <li><strong>Automation:</strong> Alert triggers at reorder points</li>
+          <li><strong>Validation:</strong> Published on official IAF website as reference</li>
+        </ul>
+      </div>
+      <div style="text-align:center;background:#f0f8f0;padding:1rem;border-radius:8px">
+        <div style="font-size:1.5rem;font-weight:800;color:var(--success)">70%</div>
+        <div style="font-size:.9rem;color:var(--muted);margin-top:.25rem">Stockout Reduction</div>
+        <div style="font-size:.85rem;color:#666;margin-top:.5rem">₹2+ Cr inventory optimization</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <div style="margin-top:1rem" role="note" aria-label="Proof point">
+          <strong>COVID-19 Multi-Facility Management (Mar–Dec 2020):</strong>
+          <p style="margin:.35rem 0 0">Managed 4 operational facilities with 100% operational continuity and zero safety incidents — validated by daily logs and inspections (available on request).</p>
+        </div>
+	<div style="margin-top:1rem" role="note" aria-label="Technology integration proof">
+  <strong>Rafale Technology Integration (2021-2022):</strong>
+  <p style="margin:.35rem 0 0">Successfully coordinated French technical teams for advanced aircraft systems integration with zero delays and complete knowledge transfer (documented in project completion reports).</p>
+</div>
+      </section>
+
+      <!-- Results -->
+      <section class="page-section" aria-labelledby="results-title">
+        <div class="page-header" role="region" aria-labelledby="results-title">
+          <h2 id="results-title">Measurable Results</h2>
+          <p>Proven business impact with quantified outcomes</p>
+        </div>
+
+        <div>
+          <h3>Financial & Operational Performance</h3>
+          <div class="metrics-grid" role="list" aria-label="Key performance metrics">
+            <figure class="metric" role="listitem" aria-labelledby="r1">
+              <figcaption id="r1" class="label"><span class="num">70%</span> Reduction in Critical Failures</figcaption>
+              <div class="meta">2018–2022 vs prior baseline (operational incident reports).</div>
+            </figure>
+
+            <figure class="metric" role="listitem" aria-labelledby="r2">
+              <figcaption id="r2" class="label"><span class="num">25%</span> Efficiency Improvement</figcaption>
+              <div class="meta">Resource utilization optimization (2019–2022).</div>
+            </figure>
+
+            <figure class="metric" role="listitem" aria-labelledby="r3">
+              <figcaption id="r3" class="label"><span class="num">60%</span> Emergency Cost Decrease</figcaption>
+              <div class="meta">Reduction in unplanned procurement (2018–2022).</div>
+            </figure>
+
+            <figure class="metric" role="listitem" aria-labelledby="r4">
+              <figcaption id="r4" class="label"><span class="num">100%</span> Audit Success Rate</figcaption>
+              <div class="meta">Perfect compliance record (2002–2022) — reports on request.</div>
+            </figure>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem">
+  <h3>Cross-Industry Applications & ROI Projections</h3>
+  <p style="margin-bottom:1rem;color:var(--muted);line-height:1.6">
+    Framework principles tested across high-stakes environments - adaptable to civilian operations requiring reliability and compliance.
+  </p>
+  
+  <div class="industry-grid">
+    <div class="industry-card" style="border-left-color:var(--primary-red)">
+      <h4 style="margin:0 0 .5rem">Manufacturing & Production</h4>
+      <div style="background:#fff3cd;padding:.5rem;border-radius:6px;margin:.5rem 0;font-size:.85rem;color:#856404">
+        <strong>Expected ROI:</strong> 15-25% efficiency improvement within 12 months
+      </div>
+      <ul style="margin:0;padding-left:1rem;color:var(--muted);font-size:.95rem">
+        <li>Zero-defect quality management systems</li>
+        <li>Predictive equipment maintenance protocols</li>
+        <li>Supply chain optimization & vendor coordination</li>
+        <li>Automated regulatory compliance tracking</li>
+        <li>Real-time production monitoring dashboards</li>
+      </ul>
+    </div>
+
+    <div class="industry-card" style="border-left-color:var(--success)">
+      <h4 style="margin:0 0 .5rem">Technology Services & IT Operations</h4>
+      <div style="background:#d4edda;padding:.5rem;border-radius:6px;margin:.5rem 0;font-size:.85rem;color:#155724">
+        <strong>Expected ROI:</strong> 20-30% SLA improvement, 40% incident reduction
+      </div>
+      <ul style="margin:0;padding-left:1rem;color:var(--muted);font-size:.95rem">
+        <li>SLA monitoring & automated escalation systems</li>
+        <li>QA automation & release management</li>
+        <li>Business continuity & disaster recovery protocols</li>
+        <li>Infrastructure monitoring & predictive maintenance</li>
+        <li>Security compliance & audit readiness</li>
+      </ul>
+    </div>
+
+    <div class="industry-card" style="border-left-color:#6f42c1">
+      <h4 style="margin:0 0 .5rem">Financial Services & Banking</h4>
+      <div style="background:#e2d9f3;padding:.5rem;border-radius:6px;margin:.5rem 0;font-size:.85rem;color:#4a154b">
+        <strong>Expected ROI:</strong> 90%+ audit success rate, regulatory compliance automation
+      </div>
+      <ul style="margin:0;padding-left:1rem;color:var(--muted);font-size:.95rem">
+        <li>Risk management & regulatory compliance automation</li>
+        <li>Automated audit trail generation & reporting</li>
+        <li>Operational resilience & crisis management</li>
+        <li>Transaction monitoring & fraud detection support</li>
+        <li>Data governance & security protocols</li>
+      </ul>
+    </div>
+
+    <div class="industry-card" style="border-left-color:#fd7e14">
+      <h4 style="margin:0 0 .5rem">Healthcare & Life Sciences</h4>
+      <div style="background:#fff3cd;padding:.5rem;border-radius:6px;margin:.5rem 0;font-size:.85rem;color:#6f4e00">
+        <strong>Expected ROI:</strong> Patient safety improvement, operational cost reduction
+      </div>
+      <ul style="margin:0;padding-left:1rem;color:var(--muted);font-size:.95rem">
+        <li>Patient safety protocols & automated monitoring</li>
+        <li>Medical equipment lifecycle management</li>
+        <li>Crisis response & emergency management systems</li>
+        <li>Regulatory compliance (FDA, ISO 13485) automation</li>
+        <li>Quality management systems for clinical operations</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Implementation Success Factors -->
+  <div style="margin-top:1.5rem;padding:1rem;background:linear-gradient(135deg,#f8f9fa,#e9ecef);border-radius:8px">
+    <h4 style="margin:0 0 .75rem;text-align:center;color:var(--navy)">Critical Success Factors for Implementation</h4>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem">
+      <div style="text-align:center">
+        <div style="font-weight:700;color:var(--primary-red)">🎯 Executive Buy-in</div>
+        <div style="font-size:.9rem;color:var(--muted);margin-top:.25rem">C-suite commitment to systematic change</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-weight:700;color:var(--primary-red)">📊 Data Infrastructure</div>
+        <div style="font-size:.9rem;color:var(--muted);margin-top:.25rem">Robust systems for tracking & analytics</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-weight:700;color:var(--primary-red)">👥 Team Training</div>
+        <div style="font-size:.9rem;color:var(--muted);margin-top:.25rem">Comprehensive change management program</div>
+      </div>
+      <div style="text-align:center">
+        <div style="font-weight:700;color:var(--primary-red)">⏱️ Phased Approach</div>
+        <div style="font-size:.9rem;color:var(--muted);margin-top:.25rem">Gradual implementation with milestone validation</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="cta" role="region" aria-labelledby="cta-title">
+  <h3 id="cta-title" style="margin:0 0 .75rem">Ready to implement zero-error excellence in your operations?</h3>
+  <p style="margin:0 0 1rem;font-size:1rem;opacity:.95;line-height:1.5">
+    Framework developed over 20 years of high-stakes operations. Proven across international standards (American, French, Russian systems). 
+    Implementation typically 6–12 months with measurable ROI and audit-ready compliance.
+  </p>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1rem 0;text-align:center">
+    <div style="background:rgba(255,255,255,0.1);padding:.75rem;border-radius:8px">
+      <div style="font-weight:800;font-size:1.1rem">Initial Assessment</div>
+      <div style="font-size:.9rem;margin-top:.25rem">2-week operational analysis</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.1);padding:.75rem;border-radius:8px">
+      <div style="font-weight:800;font-size:1.1rem">Pilot Implementation</div>
+      <div style="font-size:.9rem;margin-top:.25rem">3-month proof of concept</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.1);padding:.75rem;border-radius:8px">
+      <div style="font-weight:800;font-size:1.1rem">Full Deployment</div>
+      <div style="font-size:.9rem;margin-top:.25rem">6-12 month systematic rollout</div>
+    </div>
+  </div>
+  
+  <p style="margin:1rem 0 .5rem;font-size:.95rem;opacity:.9">
+    <strong>Currently Available:</strong> Operations Manager roles, Process Excellence consulting, Strategic advisory engagements
+  </p>
+</div>
+      </section>
     </main>
+    <footer class="professional-footer" role="contentinfo">
+      <div class="footer-grid" role="navigation" aria-label="Contact and credentials">
+        <div class="footer-credentials">
+          <strong style="color:var(--accent-gold);font-size:1.05rem">Chandra Shekhar</strong>
+          <div style="margin-top:.35rem">Operations Excellence Leader • Systematic Innovation Specialist</div>
+          <div style="margin-top:.6rem;font-size:.9rem;color:rgba(255,255,255,.9)">IIM Bangalore EGMP • Ex-IAF (20 years) • Bengaluru</div>
+        </div>
 
-    <!-- Print Button -->
-    <button class="floating-print-btn no-print" 
-            onclick="handlePrintDownload()" 
-            aria-label="Download case study as PDF" 
-            title="Download case study as PDF"
-            style="position: fixed; top: 20px; right: 20px; background: var(--primary-red); color: white; border: none; 
-                   padding: 12px 20px; border-radius: 25px; cursor: pointer; font-weight: 600; 
-                   box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3); z-index: 1000; transition: all 0.3s ease;">
-        🖨️ Download PDF
-    </button>
+        <div class="footer-contact" style="text-align:right">
+          <a href="mailto:csiimbveteran@gmail.com">📧 Email</a>
+          <a href="https://www.linkedin.com/in/chandraiaf/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+        </div>
+      </div>
 
-    <!-- Print Footer -->
-    <div class="print-footer">Chandra Shekhar | Operations Excellence Leader | csiimbveteran@gmail.com</div>
+      <div style="margin-top:.75rem;text-align:center;opacity:.9;font-size:.9rem">
+        Professional portfolio showcasing verified achievements and operational systems. Metrics and documentation available for verification on request.
+      </div>
+    </footer>
+  </div>
 
-    <script>
-        function handlePrintDownload() {
-            // Hide floating elements and prepare for print
-            const printBtn = document.querySelector('.floating-print-btn');
-            if (printBtn) printBtn.style.display = 'none';
-            
-            // Add print-specific styling
-            document.body.classList.add('printing');
-            
-            // Trigger print dialog
+  <!-- Floating print button (no-print) -->
+  <button class="floating-print-btn no-print" aria-label="Download case study as PDF" title="Download case study as PDF" style="position:fixed;top:20px;right:20px;background:var(--primary-red);color:#fff;border:0;padding:10px 14px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.18);cursor:pointer">
+    🖨️ Download PDF
+  </button>
+
+  <script>
+    (function(){
+      const printBtn = document.querySelector('.floating-print-btn');
+      if(!printBtn) return;
+
+      // keyboard interaction for button
+      printBtn.addEventListener('keydown', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); printDoc(); }
+      });
+      printBtn.addEventListener('click', printDoc);
+
+      function hideFloating(){
+        document.querySelectorAll('.no-print, .floating-print-btn').forEach(el => el.style.display = 'none');
+      }
+      function showFloating(){
+        document.querySelectorAll('.no-print, .floating-print-btn').forEach(el => el.style.display = '');
+      }
+
+      function printDoc(){
+        // Use beforeprint/afterprint where available
+        try {
+          if (window.matchMedia) {
+            // hide floating elements right away
+            hideFloating();
             window.print();
-            
-            // Restore UI after print
-            setTimeout(() => {
-                if (printBtn) printBtn.style.display = 'block';
-                document.body.classList.remove('printing');
-            }, 100);
+            // some browsers call afterprint; fallback
+            setTimeout(showFloating, 500);
+          } else {
+            hideFloating();
+            window.print();
+            setTimeout(showFloating, 500);
+          }
+        } catch (err){
+          console.error('Print failed', err);
         }
+      }
 
-        // Accessibility and interaction improvements
-        document.addEventListener('DOMContentLoaded', function() {
-            const printBtn = document.querySelector('.floating-print-btn');
-            
-            if (printBtn) {
-                // Enhanced hover effects
-                printBtn.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-2px)';
-                    this.style.boxShadow = '0 8px 25px rgba(196, 30, 58, 0.4)';
-                });
-
-                printBtn.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                    this.style.boxShadow = '0 4px 15px rgba(196, 30, 58, 0.3)';
-                });
-
-                // Keyboard accessibility
-                printBtn.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handlePrintDownload();
-                    }
-                });
-            }
-
-            // Intersection observer for animations (with reduced motion respect)
-            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-            
-            if (!prefersReducedMotion) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }
-                    });
-                }, { threshold: 0.1, rootMargin: '50px' });
-
-                // Animate cards and metrics with performance optimization
-                const animateElements = document.querySelectorAll('.metric-card, .framework-step, .industry-card, .proof-point');
-                animateElements.forEach(element => {
-                    element.style.opacity = '0';
-                    element.style.transform = 'translateY(20px)';
-                    element.style.transition = 'all 0.6s ease';
-                    element.style.willChange = 'transform, opacity';
-                    observer.observe(element);
-                });
-            }
-
-            // Analytics tracking (placeholder)
-            function trackInteraction(type, element) {
-                console.log(`Case Study Interaction: ${type} - ${element}`);
-                // Add your analytics tracking code here
-            }
-
-            // Track CTA button clicks
-            const ctaButtons = document.querySelectorAll('.cta-button');
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    trackInteraction('CTA Click', button.textContent.trim());
-                });
-            });
-        });
-
-        // Print event handling
-        window.addEventListener('beforeprint', function() {
-            // Ensure all animations are completed and elements are visible
-            const hiddenElements = document.querySelectorAll('[style*="opacity: 0"]');
-            hiddenElements.forEach(el => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            });
-        });
-
-        window.addEventListener('afterprint', function() {
-            // Re-enable animations if needed
-            console.log('Print completed - Case study ready for sharing');
-        });
-    </script>
+      // browsers often fire beforeprint/afterprint
+      window.addEventListener('afterprint', showFloating);
+      window.addEventListener('beforeprint', hideFloating);
+    })();
+  </script>
 </body>
 </html>
